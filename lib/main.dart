@@ -36,9 +36,11 @@ class MyHomePage extends StatelessWidget {
                   Map wppost = snapshot.data[index];
                   String ime = wppost['acf']['ime_i_prezime'] as String;
                   String godina = wppost['acf']['godina_smrti'] as String;
+                  String boxL = wppost['acf']['text_box_za_l'] as String;
                   return Column(children: [
                     Text(ime),
                     Text(godina),
+                    Text(boxL),
                   ]);
                 },
               );
