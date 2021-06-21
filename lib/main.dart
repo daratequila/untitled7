@@ -34,7 +34,12 @@ class MyHomePage extends StatelessWidget {
                 itemCount: snapshot.data.length,
                 itemBuilder: (BuildContext context, int index) {
                   Map wppost = snapshot.data[index];
-                  return Text(wppost['title']['rendered']);
+                  String ime = wppost['acf']['ime_i_prezime'] as String;
+                  String godina = wppost['acf']['godina_smrti'] as String;
+                  return Column(children: [
+                    Text(ime),
+                    Text(godina),
+                  ]);
                 },
               );
             }
