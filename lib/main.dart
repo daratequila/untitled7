@@ -37,11 +37,13 @@ class MyHomePage extends StatelessWidget {
                   String ime = wppost['acf']['ime_i_prezime'] as String;
                   String godina = wppost['acf']['godina_smrti'] as String;
                   String boxL = wppost['acf']['text_box_za_l'] as String;
+                  String urlSlike =
+                      wppost['acf']['_thumbnail_id']['url'] as String;
                   return Column(children: [
+                    Image.network(urlSlike),
                     Text(ime),
                     Text(godina),
                     Text(boxL),
-                    //test
                   ]);
                 },
               );
